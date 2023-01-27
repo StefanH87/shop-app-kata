@@ -13,6 +13,7 @@
   width: 100vw;
   height: 100vh;
   background-color: snow;
+  --background-display-color: rgb(220, 220, 220, 0.3);
 }
 body {
   height: 100%;
@@ -22,7 +23,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(220, 220, 220, 0.3);
+  background-color: var(--background-display-color);
   width: 80vw;
   height: 100vh;
   padding: 1rem 2rem 1rem 2rem;
@@ -37,7 +38,7 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  height: 80vh;
+  height: 85vh;
   width: 28rem;
 
   border-radius: 1.5rem;
@@ -61,7 +62,9 @@ h2 {
 p {
   color: grey;
   margin-bottom: 2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  margin-top: 3rem;
 }
 .order {
   position: absolute;
@@ -72,10 +75,11 @@ p {
   justify-content: center;
   justify-items: center;
 
-  background-color: rgb(220, 220, 220, 0.3);
+  background-color: var(--background-display-color);
   width: 26rem;
   height: 15rem;
   border-radius: 1rem;
+  margin-top: 1.5rem;
 }
 .prize {
   background-color: white;
@@ -145,9 +149,10 @@ button {
   border: none;
   height: 3.5rem;
   width: 24rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  margin-top: rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
   background-color: #4169e1;
+  color: white;
 }
