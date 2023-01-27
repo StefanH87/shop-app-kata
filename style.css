@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: snow;
+}
+body {
+  height: 100%;
+}
+.item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(220, 220, 220, 0.3);
+  width: 80vw;
+  height: 100vh;
+  padding: 1rem 2rem 1rem 2rem;
+  gap: 2rem;
+}
+
+.item {
+  background-color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 80vh;
+  width: 28rem;
+
+  border-radius: 1.5rem;
+  padding-left: 1rem;
+
+  box-shadow: 0rem 1.5rem 1rem 0.3rem rgb(13, 27, 42, 0.1);
+}
+
+.item-box {
+  position: relative;
+}
+.pic {
+  display: flex;
+  flex-shrink: 1;
+}
+
+h2 {
+  color: green;
+  font-size: 1.5rem;
+}
+p {
+  color: grey;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+.order {
+  position: absolute;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+
+  background-color: rgb(220, 220, 220, 0.3);
+  width: 26rem;
+  height: 15rem;
+  border-radius: 1rem;
+}
+.prize {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+
+  height: 3rem;
+  width: 24rem;
+  margin-top: 0.5rem;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+.list {
+  /*background-color: white;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+
+  justify-content: center;
+  height: 3rem;
+  width: 24rem;
+}
+
+.list label {
+  margin-left: ;
+}
+
+select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  width: 4rem;
+  height: 1.6rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  margin-right: 3.2rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+}
+label {
+  padding-right: 0.2rem;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0, 0.5);
+}
+.radio {
+  /*background-color: white;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3rem;
+  width: 24rem;
+  font-size: 1.2rem;
+}
+button {
+  border: none;
+  height: 3.5rem;
+  width: 24rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  background-color: #4169e1;
+}
