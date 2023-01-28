@@ -14,10 +14,16 @@
   height: 100vh;
   background-color: snow;
   --background-display-color: rgb(220, 220, 220, 0.3);
+  --infobox-color: rgb(220, 220, 220, 0.8);
+  --button-card-color: #4561b4;
 }
 body {
   height: 100%;
 }
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------Item-Box----------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 .item-wrapper {
   display: flex;
   flex-direction: row;
@@ -30,41 +36,122 @@ body {
   gap: 2rem;
 }
 
-.item {
+.item-1,
+.item-2,
+.item-3 {
   background-color: white;
   display: flex;
   position: relative;
+  align-content: center;
   align-items: center;
+
   flex-direction: column;
-  justify-content: center;
 
   height: 85vh;
   width: 28rem;
 
   border-radius: 1.5rem;
-  padding-left: 1rem;
 
   box-shadow: 0rem 1.5rem 1rem 0.3rem rgb(13, 27, 42, 0.1);
 }
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------Item-Pic----------------------------------------------------------*/
 
 .item-box {
   position: relative;
-}
-.pic {
-  display: flex;
-  flex-shrink: 1;
+  padding-left: 1rem;
 }
 
+.item-1-backPic,
+.item-2-backPic,
+.item-3-backPic {
+  align-items: center;
+  justify-content: center;
+  align-content: flex-end;
+
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+
+  background-size: 30rem;
+  height: 85vh;
+  width: 28rem;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.item-1 .item-1-backPicShadow,
+.item-2 .item-2-backPicShadow,
+.item-3 .item-3-backPicShadow {
+  background-image: linear-gradient(
+    rgb(0, 0, 0, 0),
+    rgba(255, 255, 255, 0.5) 30%,
+    rgb(255, 255, 255) 80%,
+    rgb(255, 255, 255) 100%
+  );
+
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 15rem;
+  left: 0rem;
+  height: 10vh;
+  width: 28rem;
+}
+
+.item-1-backPic {
+  background-image: url(https://images.unsplash.com/photo-1560072810-1cffb09faf0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.item-2-backPic {
+  background-image: url(https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.item-3-backPic {
+  background-image: url(https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
+}
+/*-----------------------------Item-Pic- Ende----------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------Info-Box----------------------------------------------------------*/
+.info-box {
+  color: red;
+  position: absolute;
+  display: flex;
+
+  justify-content: center;
+
+  top: -15.5rem;
+  left: 20.5rem;
+
+  border-radius: 0.3rem;
+  background-color: var(--infobox-color);
+}
+.info-box p {
+  padding: 0;
+  margin: 0.4rem 0 0.4rem 0;
+  padding: 0 0.5rem 0 0.5rem;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+}
+/*-----------------------------Info-Box-Ende----------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
 h2 {
   color: green;
   font-size: 1.5rem;
+  padding-top: 6.5rem;
 }
 p {
   color: grey;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
+
+  font-size: 1rem;
   margin-right: 0.5rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .order {
   position: absolute;
@@ -88,7 +175,8 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-
+  font-size: 1rem;
+  font-weight: 300;
   height: 3rem;
   width: 24rem;
   margin-top: 0.5rem;
@@ -99,21 +187,17 @@ h3 {
   justify-self: center;
 }
 .list {
-  /*background-color: white;*/
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-top: 0.5rem;
 
   justify-content: center;
   height: 3rem;
   width: 24rem;
-}
-
-.list label {
-  margin-left: ;
+  margin-left: -1rem;
 }
 
 select {
@@ -130,29 +214,97 @@ select {
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
 }
-label {
-  padding-right: 0.2rem;
-  font-size: 1.1rem;
-  color: rgb(0, 0, 0, 0.5);
-}
-.radio {
-  /*background-color: white;*/
+/*------------------------------------------------------------------------------------------------------------*/
+/*------------------------------radio-color-start---------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+.radio-color-choice {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   height: 3rem;
   width: 24rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
+
+.color-1,
+.color-2,
+.color-3 {
+  display: flex;
+  position: relative;
+  padding-left: 0.3rem;
+  margin-left: 0.2rem;
+}
+
+.color-1::before,
+.color-2::before,
+.color-3::before {
+  content: "";
+  position: absolute;
+  top: -0.13rem;
+  left: 0.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------Asics-Color----------------------------------------------------------*/
+.asics-color-1::before {
+  background-color: blue;
+}
+.asics-color-2::before {
+  background-color: red;
+}
+.asics-color-3::before {
+  background-color: black;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------New-Balance-Color----------------------------------------------------------*/
+.adidas-color-1::before {
+  background-color: rgb(0, 0, 0);
+}
+.adidas-color-2::before {
+  background-color: rgb(0, 0, 0);
+}
+.adidas-color-3::before {
+  background-color: black;
+}
+
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------New-Balance-Color----------------------------------------------------------*/
+
+.new-balance-color-1::before {
+  background-color: green;
+}
+.new-balance-color-2::before {
+  background-color: green;
+}
+.new-balance-color-3::before {
+  background-color: green;
+}
+
+.color-1:checked::before {
+  content: "";
+  position: absolute;
+  border: 2px solid red;
+  top: -0.13rem;
+  left: 0.6rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------radio-color-end----------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------*/
+
 button {
   border: none;
-  height: 3.5rem;
+  height: 3rem;
   width: 24rem;
   margin-bottom: 0rem;
-  margin-top: rem;
+  margin-top: 1rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
-  background-color: #4169e1;
+  background-color: var(--button-card-color);
   color: white;
 }
